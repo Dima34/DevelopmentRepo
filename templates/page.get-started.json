@@ -29,6 +29,7 @@
         "b6cfb27f-6d4e-4bd3-9ded-624feb1fb69c": {
           "type": "card",
           "settings": {
+            "image": "shopify:\/\/shop_images\/cover-1.png",
             "title": "1. Full Coverage Fit",
             "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
           }
@@ -36,8 +37,9 @@
         "06b04d07-1b69-4db4-a0ad-74d4f6f5e6d2": {
           "type": "card",
           "settings": {
-            "title": "1. Full Coverage Fit",
-            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+            "image": "shopify:\/\/shop_images\/cover-2.png",
+            "title": "2. Protection",
+            "text": "Protect car seats from spills & damage, preserving your car's value with high-quality, durable materials."
           }
         }
       },
@@ -56,8 +58,9 @@
         "19dd367f-6360-4e09-aae5-ba1aebd55864": {
           "type": "card",
           "settings": {
-            "title": "1. Full Coverage Fit",
-            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+            "image": "shopify:\/\/shop_images\/cover-3.png",
+            "title": "3. Luxurious Comfort",
+            "text": "Enhanced comfort with foam layer & lumbar support for enjoyable, pain-free long drives."
           }
         }
       },
