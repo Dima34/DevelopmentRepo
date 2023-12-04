@@ -27,12 +27,28 @@
         "padding_top":45,
         "padding_bottom": 45
       }
+    },
+    "one_two_horizontal_cards1": {
+      "type": "one-two-horizontal-cards",
+      "settings": {
+        "padding_top":45,
+        "padding_bottom": 45
+      }
+    },
+    "one_two_horizontal_cards2": {
+      "type": "one-two-horizontal-cards",
+      "settings": {
+        "padding_top":45,
+        "padding_bottom": 45
+      }
     }
   },
   "order": [
     "header_logo_button",
     "title_logo_form",
     "text_horizontal_three_img",
-    "one_two_horizontal_cards"
+    "one_two_horizontal_cards",
+    "one_two_horizontal_cards1",
+    "one_two_horizontal_cards2"
   ]
 }
