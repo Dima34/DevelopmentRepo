@@ -133,6 +133,7 @@
       ],
       "settings": {
         "title": "The People Are Speaking",
+        "background": "shopify:\/\/shop_images\/three-cards-background.jpg",
         "padding_top": 88,
         "padding_bottom": 88
       }
