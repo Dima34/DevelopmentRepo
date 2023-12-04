@@ -78,15 +78,17 @@
         "d26b3e70-cbdb-4c11-9d64-44b7a6cef2d6": {
           "type": "card",
           "settings": {
-            "title": "1. Full Coverage Fit",
-            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+            "image": "shopify:\/\/shop_images\/cover-4.png",
+            "title": "4. Safety Compatibility",
+            "text": "Compatible with baby seats, ensuring safety is not compromised for style and comfort."
           }
         },
         "a90259c2-6a14-41ac-bcdf-f589b196902c": {
           "type": "card",
           "settings": {
-            "title": "1. Full Coverage Fit",
-            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+            "image": "shopify:\/\/shop_images\/cover-5.png",
+            "title": "5. Pet Friendly",
+            "text": "Pet-friendly design with water-resistant materials & non-slip backing for worry-free rides with furry friends."
           }
         }
       },
