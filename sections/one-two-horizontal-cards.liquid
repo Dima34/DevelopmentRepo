@@ -14,13 +14,13 @@
     }
 {%- endstyle -%}
 
-<div class="text-horizontal-three-cards">
-    <div class="page-width section-{{ section.id }}-padding text-horizontal-three-cards__container">
+<div class="one-two-horizontal-cards">
+    <div class="page-width section-{{ section.id }}-padding one-two-horizontal-cards__container">
         {% for block in settings.block %}
-            <div class="text-horizontal-three-cards__card">
+            <div class="one-two-horizontal-cards__card">
                 {{ block.image | image_url: width: 202 | image_tag: class: "three-cards__card-image" }}
-                <h2 class="three-cards__card-title">{{ block.title }}</h2>
-                <p class="three-cards__card-text">{{ block.text }}</p>
+                <h2 class="horizontal-cards-title">{{ block.title }}</h2>
+                <p class="horizontal-cards-text">{{ block.text }}</p>
             </div>
         {% endfor %}
     </div>
