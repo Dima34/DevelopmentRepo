@@ -16,11 +16,11 @@
 
 <div class="one-two-horizontal-cards">
     <div class="page-width section-{{ section.id }}-padding one-two-horizontal-cards__container">
-        {% for block in settings.block %}
+        {% for block in section.blocks %}
             <div class="one-two-horizontal-cards__card">
-                {{ block.image | image_url: width: 202 | image_tag: class: "three-cards__card-image" }}
-                <h2 class="horizontal-cards-title">{{ block.title }}</h2>
-                <p class="horizontal-cards-text">{{ block.text }}</p>
+                {{ block.settings.image | image_url: width: 200 | image_tag: class: "three-cards__card-image" }}
+                <h2 class="horizontal-cards-title">{{ block.settings.title }}</h2>
+                <p class="horizontal-cards-text">{{ block.settings.text }}</p>
             </div>
         {% endfor %}
     </div>

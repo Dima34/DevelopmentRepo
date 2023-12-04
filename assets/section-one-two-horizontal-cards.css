@@ -1,16 +1,59 @@
+section:has(.one-two-horizontal-cards__container):last-child .one-two-horizontal-cards__container {
+    border-bottom: unset;
+}
 
+.one-two-horizontal-cards__container {
+    display: flex;
+    gap: 100px;
+    border-bottom: 1px solid #000;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
+.one-two-horizontal-cards__card {
+    flex-basis: 200px;
+    max-width: 640px;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.horizontal-cards-title {
+    color: #000;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.horizontal-cards-text {
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+.three-cards__card-image{
+    max-width: 200px;
+    width: 100%;
+    height: auto;
+}
 
 @media screen and (max-width: 990px) {
-   
+    .one-two-horizontal-cards__container {
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    
+
 }
 
 @media screen and (max-width: 479px) {
-    
+
 }
 
 
