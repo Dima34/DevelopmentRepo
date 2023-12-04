@@ -103,7 +103,36 @@
     },
     "static_three_comments": {
       "type": "static-three-comments",
+      "blocks": {
+        "9e145f22-8681-4e3a-84ce-14c8a2463280": {
+          "type": "card",
+          "settings": {
+            "title": "Ethan Westrup",
+            "text": "Absolutely love these seat covers! Did some research before my purchase and these are the BEST option no doubt. Makes the drive feel more luxurious."
+          }
+        },
+        "3e6bc674-b9d8-4718-abf9-b8cdcd103f37": {
+          "type": "card",
+          "settings": {
+            "title": "Hainee Huynh",
+            "text": "Love the product and most importantly custom service was on point."
+          }
+        },
+        "e53cd7d2-5d2a-4279-a3b2-845e900df150": {
+          "type": "card",
+          "settings": {
+            "title": "Richard N.",
+            "text": "A1 Work On The Car, I Only Recommend Greatness"
+          }
+        }
+      },
+      "block_order": [
+        "9e145f22-8681-4e3a-84ce-14c8a2463280",
+        "3e6bc674-b9d8-4718-abf9-b8cdcd103f37",
+        "e53cd7d2-5d2a-4279-a3b2-845e900df150"
+      ],
       "settings": {
+        "title": "The People Are Speaking",
         "padding_top": 88,
         "padding_bottom": 88
       }
