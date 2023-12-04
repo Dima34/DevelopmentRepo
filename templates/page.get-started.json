@@ -10,35 +10,89 @@
     "title_logo_form": {
       "type": "title-logo-form",
       "settings": {
-        "padding_top":100,
-        "padding_bottom": 16
+        "padding_top": 100,
+        "padding_bottom": 16,
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 40
       }
     },
     "text_horizontal_three_img": {
       "type": "text-horizontal-three-img",
       "settings": {
-        "padding_top":52,
+        "padding_top": 52,
         "padding_bottom": 52
       }
     },
     "one_two_horizontal_cards": {
       "type": "one-two-horizontal-cards",
+      "blocks": {
+        "b6cfb27f-6d4e-4bd3-9ded-624feb1fb69c": {
+          "type": "card",
+          "settings": {
+            "title": "1. Full Coverage Fit",
+            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+          }
+        },
+        "06b04d07-1b69-4db4-a0ad-74d4f6f5e6d2": {
+          "type": "card",
+          "settings": {
+            "title": "1. Full Coverage Fit",
+            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+          }
+        }
+      },
+      "block_order": [
+        "b6cfb27f-6d4e-4bd3-9ded-624feb1fb69c",
+        "06b04d07-1b69-4db4-a0ad-74d4f6f5e6d2"
+      ],
       "settings": {
-        "padding_top":45,
+        "padding_top": 45,
         "padding_bottom": 45
       }
     },
     "one_two_horizontal_cards1": {
       "type": "one-two-horizontal-cards",
+      "blocks": {
+        "19dd367f-6360-4e09-aae5-ba1aebd55864": {
+          "type": "card",
+          "settings": {
+            "title": "1. Full Coverage Fit",
+            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+          }
+        }
+      },
+      "block_order": [
+        "19dd367f-6360-4e09-aae5-ba1aebd55864"
+      ],
       "settings": {
-        "padding_top":45,
+        "padding_top": 45,
         "padding_bottom": 45
       }
     },
     "one_two_horizontal_cards2": {
       "type": "one-two-horizontal-cards",
+      "blocks": {
+        "d26b3e70-cbdb-4c11-9d64-44b7a6cef2d6": {
+          "type": "card",
+          "settings": {
+            "title": "1. Full Coverage Fit",
+            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+          }
+        },
+        "a90259c2-6a14-41ac-bcdf-f589b196902c": {
+          "type": "card",
+          "settings": {
+            "title": "1. Full Coverage Fit",
+            "text": "The seat covers come with CNC buttons, adjustable buckles, and silicone grip technology, ensuring easy installation and a non-slip fit that looks and feels great."
+          }
+        }
+      },
+      "block_order": [
+        "d26b3e70-cbdb-4c11-9d64-44b7a6cef2d6",
+        "a90259c2-6a14-41ac-bcdf-f589b196902c"
+      ],
       "settings": {
-        "padding_top":45,
+        "padding_top": 45,
         "padding_bottom": 45
       }
     }
