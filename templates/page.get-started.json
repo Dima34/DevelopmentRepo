@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "header_logo_button": {
+      "type": "header-logo-button",
+      "settings": {
+        "padding_top": 40,
+        "padding_bottom": 16
+      }
+    },
+    "title_logo_form": {
+      "type": "title-logo-form",
+      "settings": {
+        "padding_top":100,
+        "padding_bottom": 16
+      }
+    },
+    "text_horizontal_three_img": {
+      "type": "text-horizontal-three-img",
+      "settings": {
+        "padding_top":52,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "header_logo_button",
+    "title_logo_form",
+    "text_horizontal_three_img"
+  ]
+}

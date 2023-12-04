@@ -1,0 +1,47 @@
+.logo-button-header{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.logo-button-header__container{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.section-header-button{
+    color: #000;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-right: 0;
+    padding: 12px 25px;
+    font-size: 18px;
+    line-height: 20px;
+    text-decoration: none;
+    transition: all .2s;
+    display: inline-block;
+}
+
+.section-header-button:hover {
+    color: #fff;
+    background-color: #32343a;
+}
+
+
+@media screen and (max-width: 480px) {
+    .logo-button-header__container{
+        flex-direction: column;
+        justify-content: center;
+        gap: 00px;
+        align-items: center;
+    }
+}
+
+
