@@ -1,4 +1,4 @@
-section:has(.one-two-horizontal-cards__container):last-child .one-two-horizontal-cards__container {
+section:has(.one-two-horizontal-cards__container):last-of-type .one-two-horizontal-cards__container {
     border-bottom: unset;
 }
 

@@ -1,0 +1,101 @@
+{{ 'section-static-three-comments.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+<div class="static-three-comments" style="background-image: url('{{ image_picker | asset_img_url }}')">
+    <div class="page-width section-{{ section.id }}-padding static-three-comments__container">
+        <h2 class="static-three-comments__title">{{ section.settings.title }}</h2>
+        <div class="static-three-comments__blocks">
+            {% for block in section.blocks %}
+                <div class="static-three-comments__card">
+                    <div class="static-three-comments__card-header">
+                        <img src="{{ 'quote.svg' | asset_url }}"
+                                loading="lazy" alt="quote icon">
+                        <img src="{{ 'stars.svg' | asset_url }}"
+                                loading="lazy" alt="five stars icon">
+                    </div>
+                    <p class="static-three-comments__cards-text">{{ block.settings.text }}</p>
+                    <h2 class="static-three-comments__cards-title">{{ block.settings.title }}</h2>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Static three comments",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "The People Are Speaking"
+    },
+    {
+      "type": "image_picker",
+      "id": "background",
+      "label": "Background"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 88
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 1,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 88
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Card",
+      "type": "card",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Ethan Westrup"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text",
+          "default": "Absolutely love these seat covers! Did some research before my purchase and these are the BEST option no doubt. Makes the drive feel more luxurious."
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

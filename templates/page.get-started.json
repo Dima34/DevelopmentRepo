@@ -100,6 +100,13 @@
         "padding_top": 45,
         "padding_bottom": 45
       }
+    },
+    "static_three_comments": {
+      "type": "static-three-comments",
+      "settings": {
+        "padding_top": 88,
+        "padding_bottom": 88
+      }
     }
   },
   "order": [
@@ -108,6 +115,7 @@
     "text_horizontal_three_img",
     "one_two_horizontal_cards",
     "one_two_horizontal_cards1",
-    "one_two_horizontal_cards2"
+    "one_two_horizontal_cards2",
+    "static_three_comments"
   ]
 }
