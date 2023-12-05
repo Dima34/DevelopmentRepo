@@ -167,6 +167,7 @@
       ],
       "settings": {
         "heading": "There’s Luxury in the Details",
+        "image": "shopify:\/\/shop_images\/chairs.png",
         "title": "PremiumEco-Leather",
         "subtitle": "The Worlds Softest Leather",
         "text": "A strong grain material eco-leather that is durable, protective, and perforated. Completely compatible with heated seats & air bags.",
@@ -177,6 +178,8 @@
     "gallery_three_card": {
       "type": "gallery-three-cards",
       "settings": {
+        "heading": "Craftsmanship is in our DNA",
+        "subtitle": "A strong grain eco-leather that is durable, protective, and perforated.  Completely compatible with heated seats.",
         "padding_top": 0,
         "padding_bottom": 0
       }
