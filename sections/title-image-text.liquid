@@ -30,8 +30,8 @@
                 <ul class="title-image-text__right-list">
                     {% for block in section.blocks  %}
                         <li class="title-image-text__right-list-elem">
-                            {{ "checked-icon.svg" | asset_url | image_tag }}
-                            <p>{{ block.text }}</p>
+                            <img src="{{ "checked-icon.svg" | asset_url }}" alt="checkmark">
+                            <p>{{ block.settings.text }}</p>
                         </li>    
                     {% endfor %}
                 </ul>    
@@ -43,7 +43,7 @@
 {
   "name": "One Two horizontal cards",
   "tag": "section",
-  "class": "one-two-horizontal-cards__wrapper",
+  "class": "title-image-text__wrapper",
   "max_blocks": 6,
   "disabled_on": {
     "groups": [

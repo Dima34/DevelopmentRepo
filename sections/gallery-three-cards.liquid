@@ -1,0 +1,94 @@
+{{ 'section-gallery-three-cards.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+<div class="gallery-three-cards">
+    <div class="page-width section-{{ section.id }}-padding gallery-three-cards__container">
+        <h2 class="gallery-three-cards__heading">{{ section.settings.heading }}</h2>
+        <p class="gallery-three-cards__subtitle">{{ section.settings.subtitle }}</p>
+        <ul class="`">
+            {% if section.blocks %}
+                {% for block in section.blocks %}
+                    {{ block.settings.image | image_url: width: 680 | image_tag }}
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+
+    {% schema %}
+    {
+      "name": "Gallery three cards",
+      "tag": "section",
+      "class": "gallery-three-cards__wrapper",
+      "max_blocks": 6,
+      "disabled_on": {
+        "groups": [
+          "header",
+          "footer"
+        ]
+      },
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading",
+          "default": "Craftsmanship is in our DNA"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle",
+          "default": "A strong grain eco-leather that is durable, protective, and perforated. <br> Completely compatible with heated seats."
+        },
+        {
+          "type": "header",
+          "content": "t:sections.all.padding.section_padding_heading"
+        },
+        {
+          "type": "range",
+          "id": "padding_top",
+          "min": 0,
+          "max": 130,
+          "step": 10,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_top",
+          "default": 110
+        },
+        {
+          "type": "range",
+          "id": "padding_bottom",
+          "min": 0,
+          "max": 130,
+          "step": 10,
+          "unit": "px",
+          "label": "t:sections.all.padding.padding_bottom",
+          "default": 110
+        }
+      ],
+      "blocks": [
+        {
+          "type": "feature",
+          "name": "Feature",
+          "settings": [
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Image"
+            }
+          ]
+        }
+      ]
+    }
+    {% endschema %}

@@ -1,3 +1,7 @@
+.title-image-text__wrapper .title-image-text__container{
+    max-width: 1400px;
+}
+
 .title-image-text{
     background: #000;    
 }
@@ -6,7 +10,7 @@
     display: grid;
     grid-template-columns: repeat(2, minmax(0,1fr));
     column-gap: 20px;
-    row-gap: 100px;
+    row-gap: 0px;
 }
 
 .title-image-text__heading{
@@ -31,7 +35,8 @@
 .title-image-text__right{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .title-image-text__right-subtitle{
@@ -39,6 +44,8 @@
     margin-top: 0;
     font-weight: 600;
     line-height: 80px;
+    font-size: 24px;
+    margin-bottom: 10px;    
 }
 
 .title-image-text__right-title{
@@ -64,32 +71,75 @@
     grid-template-columns: 1fr 1fr;
     grid-auto-columns: 1fr;
     display: grid;
+    margin: 0;
+    padding: 0;
 }
 
 .title-image-text__right-list-elem{
     display: flex;
     flex-direction: row;
     align-items: center;
+    gap: 20px;
 }
 
 .title-image-text__right-list-elem p{
     color: #fff;
-    margin-bottom: 0;
+    margin: 0;
     font-size: 20px;
+    line-height: 20px;
     font-weight: 600;
 }
 
 
 @media screen and (max-width: 990px) {
+    .title-image-text__heading{
+        font-size: 36px;
+        line-height: 42px;   
+    }
 
+    .title-image-text__right-subtitle{
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .title-image-text__right-title{
+        font-size: 27px;
+        line-height: 32px;
+    }
+
+    .title-image-text__right-text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .title-image-text__right-list-elem p{
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 768px) {
+    .title-image-text__container{
+        grid-template-columns: 1fr;
+    }
 
+    .title-image-text__heading{
+        grid-column: 1/2;
+    }
+    
+    .title-image-text__left{
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 479px) {
-
+    .title-image-text__right-list-elem{
+        gap: 10px;
+    }
+    
+    .title-image-text__right-list-elem img{
+        width: 20px;
+        height: auto;
+    }
 }
 
 
