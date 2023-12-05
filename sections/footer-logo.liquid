@@ -16,6 +16,9 @@
 
 <div class="footer-logo">
     <div class="page-width section-{{ section.id }}-padding footer-logo__container">
+        {% if section.settings.logo %}
+            
+        {% endif %}
         {{ section.settings.logo | image_url: width: 140 | image_tag }}
     </div>
         
@@ -26,6 +29,11 @@
   "name": "Simple header",
   "tag": "footer",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
