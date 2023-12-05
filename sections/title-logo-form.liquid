@@ -16,14 +16,12 @@
 
 <div class="title-logo-form">
     <div class="page-width section-{{ section.id }}-padding title-logo-form__container">
-        <h1 class="title-logo-form__heading">5 Reasons Why<br>These Luxury Car Seat Covers Are The Best</h1>
+        <h1 class="title-logo-form__heading">{{ section.settings.title }}</h1>
         <div id="get-started" class="title-logo-form__form-wrapper">
-            <img
-                    src="https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/6458e72d8cae855cf8569b7a_logo.svg"
-                    loading="lazy" alt="seat cover solution circular logo"
-                    class="title-logo-form__form-logo"
-            >
-            <h2 class="title-logo-form__form-heading">Start Here. We’ve Got You Covered!</h2>
+            {% if section.settings.logo %}
+                {{ section.settings.logo | image_url: width: 111 | image_tag: class: "title-logo-form__form-logo" }}
+            {% endif %}
+            <h2 class="title-logo-form__form-heading">{{ section.settings.form-title }}</h2>
             <form id="email-form" class="title-logo-form__form" name="email-form">
                 <select id="year-input" name="field" data-name="Field" class="select-field w-select">
                     <option value="">Year</option>
@@ -92,7 +90,7 @@
                         class="select-field-3 w-select">
                     <option value="">Model</option>
                 </select>
-                <input type="submit" value="Let's go" id="submit-button" class="submit-button w-button">
+                <a href="{{ section.settings.form-link }}">{{ section.settings.form-link-text }}</a>
             </form>
         </div>
     </div>
@@ -104,6 +102,35 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "5 Reasons Why<br>These Luxury Car Seat Covers Are The Best"
+    },
+    {
+      "type": "text",
+      "id": "form-title",
+      "label": "Form title",
+      "default": "Start Here. We’ve Got You Covered!"
+    },
+    {
+      "type": "text",
+      "id": "form-link",
+      "label": "Form button Link",
+      "default": "https://stablelastore.com/products/heavy-duty-floor-mats-for-cars"
+    },
+    {
+      "type": "text",
+      "id": "form-link-text",
+      "label": "Form link Text",
+      "default": "Let's go"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"

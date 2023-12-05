@@ -81,7 +81,8 @@
     border: 1px solid #ccc;
 }
 
-.title-logo-form__form input[type="submit"] {
+.title-logo-form__form a {
+    display: block;
     height: 60px;
     color: #fff;
     text-transform: uppercase;
@@ -92,9 +93,13 @@
     cursor: pointer;
     padding: 9px 15px;
     border: 0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.title-logo-form__form input[type="submit"]:hover {
+.title-logo-form__form a:hover {
     background-color: #000;
 }
 
@@ -111,7 +116,7 @@
     }
 
     .title-logo-form__form select,
-    .title-logo-form__form input[type="submit"]{
+    .title-logo-form__form a {
         height: 40px;
         font-size: 14px;
     }
@@ -126,15 +131,15 @@
     .title-logo-form__heading {
         margin-top: 10px;
     }
-    
+
     .title-logo-form__container {
         background-size: cover;
         padding-top: 0;
         padding-bottom: 20px;
         margin-top: 80px;
     }
-    
-    .title-logo-form__form-wrapper{
+
+    .title-logo-form__form-wrapper {
         background-position: center;
     }
 }

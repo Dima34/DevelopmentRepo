@@ -17,18 +17,12 @@
 <div class="text-horizontal-three-cards">
     <div class="page-width section-{{ section.id }}-padding text-horizontal-three-cards__container">
         <div class="text-horizontal-three-cards__left">
-            <h2 class="heading-9 mb-20">As Seen In</h2>
+            <h2>{{ section.settings.title }}</h2>
         </div>
         <div class="text-horizontal-three-cards__right">
-            <img
-                    src="https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/6458f172fc63904925334686_image%2020.svg"
-                    loading="lazy" alt="">
-            <img
-                    src="https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/6458f17214621461195ebad2_fox-news%201.svg"
-                    loading="lazy" alt="">
-            <img
-                    src="https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/6458f1726647ecbeed44ad51_image%2021.svg"
-                    loading="lazy" alt="">
+            {% for block in section.blocks %}
+                {{ block.settings.image | image_url: height: 69 | image_tag }}
+            {% endfor %}
         </div>
     </div>
 </div>
@@ -38,7 +32,14 @@
   "name": "Text three cards",
   "tag": "section",
   "class": "section",
+  
   "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "As Seen In"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
@@ -62,6 +63,20 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 36
+    }
+  ],
+  "blocks": [
+    {
+      "type": "picture",
+      "name": "Picture",
+      "max_blocks" : 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
     }
   ]
 }

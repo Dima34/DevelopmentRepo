@@ -16,17 +16,15 @@
 
 <div class="logo-button-header">
     <div class="page-width section-{{ section.id }}-padding logo-button-header__container">
-        <img
-                src="https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/64557961e6fb5782dbe54982_scs-logo-hero.png"
-                loading="lazy" width="276" sizes="(max-width: 479px) 88vw, 276px" alt=""
-                srcset="https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/64557961e6fb5782dbe54982_scs-logo-hero-p-500.png 500w, https://uploads-ssl.webflow.com/645577afcb110d04509fc3a6/64557961e6fb5782dbe54982_scs-logo-hero.png 552w"
-                class="image"
-        >
-        <a href="#get-started-now" class="section-header-button">
-            <strong class="bold-text">Get Started</strong>
+        {% if section.settins.logo %}
+            {{ section.settings.logo | image_url:height:50 | image_tag }}
+        {% endif %}
+
+        <a href="{{ section.settings.link }}" class="section-header-button">
+            <strong class="bold-text">{{ section.settings.link-text }}</strong>
         </a>
     </div>
-        
+
 </div>
 
 {% schema %}
@@ -35,6 +33,23 @@
   "tag": "section",
   "class": "section",
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    },
+    {
+      "type" : "text",
+      "id" : "link",
+      "label" : "Link",
+      "default" : "#get-started"
+    },
+    {
+      "type" : "text",
+      "id" : "link-text",
+      "label" : "Link Text",
+      "default" : "Get Started"
+    },
     {
       "type": "header",
       "content": "t:sections.all.padding.section_padding_heading"
