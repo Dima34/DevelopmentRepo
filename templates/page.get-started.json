@@ -26,7 +26,33 @@
     },
     "text_horizontal_three_img": {
       "type": "text-horizontal-three-img",
+      "blocks": {
+        "ad9b9a68-2e2c-48bd-957a-19030b3f8fee": {
+          "type": "picture",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-1.svg"
+          }
+        },
+        "7fa02088-fd52-4fd0-b5d0-039418a2a831": {
+          "type": "picture",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-2.svg"
+          }
+        },
+        "f449da02-93d8-4212-a8d0-9252249b1465": {
+          "type": "picture",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image-3.svg"
+          }
+        }
+      },
+      "block_order": [
+        "ad9b9a68-2e2c-48bd-957a-19030b3f8fee",
+        "7fa02088-fd52-4fd0-b5d0-039418a2a831",
+        "f449da02-93d8-4212-a8d0-9252249b1465"
+      ],
       "settings": {
+        "title": "As Seen In",
         "padding_top": 52,
         "padding_bottom": 52
       }
