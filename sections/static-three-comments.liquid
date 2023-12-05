@@ -14,7 +14,7 @@
     }
 {%- endstyle -%}
 
-<div class="static-three-comments" style="background-image: url('{{ image_picker | asset_img_url }}')">
+<div class="static-three-comments" style="background-image: url('{{ section.settings.background | image_url }}')">
     <div class="page-width section-{{ section.id }}-padding static-three-comments__container">
         <h2 class="static-three-comments__title">{{ section.settings.title }}</h2>
         <div class="static-three-comments__blocks">

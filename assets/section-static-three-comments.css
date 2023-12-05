@@ -3,6 +3,10 @@
     background-size: cover;
 }
 
+.static-three-comments__container.page-width{
+    max-width: 1400px;
+}
+
 .static-three-comments__blocks {
     display: flex;
     flex-direction: row;

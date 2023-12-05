@@ -1,4 +1,8 @@
-section:has(.one-two-horizontal-cards__container):last-of-type .one-two-horizontal-cards__container {
+.one-two-horizontal-cards__wrapper:first-of-type{
+    background: red;
+} 
+
+.one-two-horizontal-cards__container {
     border-bottom: unset;
 }
 

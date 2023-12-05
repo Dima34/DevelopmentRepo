@@ -1,0 +1,124 @@
+{{ 'section-title-image-text.css' | asset_url | stylesheet_tag }}
+
+{%- style -%}
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+
+    @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    }
+{%- endstyle -%}
+
+<div class="title-image-text">
+    <div class="page-width section-{{ section.id }}-padding title-image-text__container">
+        <h2 class="title-image-text__heading">{{ section.settings.heading }}</h2>
+        <div class="title-image-text__left">
+            {% if section.settings.image %}
+                {{ section.settings.image | image_url: width: 1016 | image_tag: class: "title-image-text__left-image"}}
+            {% endif %}
+        </div>
+        <div class="title-image-text__right">
+            <h3 class="title-image-text__right-subtitle">{{ section.settings.subtitle }}</h3>
+            <h2 class="title-image-text__right-title">{{ section.settings.title }}</h2>
+            <p class="title-image-text__right-text">{{ section.settings.text }}</p>
+            {% if section.blocks %}
+                <ul class="title-image-text__right-list">
+                    {% for block in section.blocks  %}
+                        <li class="title-image-text__right-list-elem">
+                            {{ "checked-icon.svg" | asset_url | image_tag }}
+                            <p>{{ block.text }}</p>
+                        </li>    
+                    {% endfor %}
+                </ul>    
+            {% endif %}
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "One Two horizontal cards",
+  "tag": "section",
+  "class": "one-two-horizontal-cards__wrapper",
+  "max_blocks": 3,
+  "disabled_on": {
+    "groups": [
+      "header",
+      "footer"
+    ]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default" : "There’s Luxury in the Details"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default" : "Premium<br>Eco-Leather"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Subtitle",
+      "default" : "The Worlds Softest Leather"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default" : "A strong grain material eco-leather that is durable, protective, and perforated. Completely compatible with heated seats &amp; air bags."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.padding.section_padding_heading"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 130,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_top",
+      "default": 110
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 130,
+      "step": 10,
+      "unit": "px",
+      "label": "t:sections.all.padding.padding_bottom",
+      "default": 110
+    }
+  ],
+  "blocks" :[
+    {
+      "type": "feature",
+      "name": "Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Ultra Durable",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
