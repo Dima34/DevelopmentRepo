@@ -1,0 +1,201 @@
+{% comment %}
+  Renders a set of links for paginated results. Must be used within paginate tags.
+
+  Usage:
+  {% paginate results by 2 %}
+    {% render 'pagination', paginate: paginate, anchor: '#yourID' %}
+  {% endpaginate %}
+
+  Accepts:
+
+  - options_json: {String}
+{% endcomment %}
+
+
+<style>
+    .custom-option__container{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .custom-option__container[hidden]{
+        display: none;
+    }
+</style>
+
+{% assign jsonObject = options_json.value %}
+
+{% for field in jsonObject %}
+    {% assign handlizeLavel = field.label | handleize %}
+    {% assign fieldNameAttr = field.id | append: handlizeLavel %}
+
+    {% capture baseAttrs %}
+        {% unless field.show-in-cart == false %}
+            name="properties[{{ field.label }}]"
+        {% endunless %}
+        id="{{ field.id }}"
+        form="{{ form_id }}"
+        {% if field.required %}
+            required
+        {% endif %}
+        {% if field.show-if-id %}
+            data-showIfID = "{{ field.show-if-id }}"
+        {% endif %}
+        {% if field.show-if-id-value %}
+            data-showIfIDValue = "{{ field.show-if-id-value }}"
+        {% endif %}
+        autocomplete="off"
+        customField
+    {% endcapture %}
+    <div class="option-selector">
+        <label class="label" for="{{ field.id }}">{{ field.label }}</label>
+        {% case field.type %}
+            {% when "checkbox" %}
+                <input type="checkbox" {{ baseAttrs }}'
+                {% if field.product-to-add-id %}
+                    additional-product-observable
+                    product-to-add-id="{{ field.product-to-add-id }}"
+                {% endif %}
+                >
+            {% when "input" %}
+                <input type="input"
+                        {{ baseAttrs }}
+                       placeholder="{{ field.placehoder }}"
+                >
+            {% when "select" %}
+                <select {{ baseAttrs }} class="cc-select__btn" additional-product-observable>
+                    {% if field.placeholder %}
+                        <option value="[default]" disabled selected>{{ field.placeholder }}</option>
+                    {% endif %}
+                    {% for option in field.options %}
+                        <option 
+                                value="{{ option.name }}"
+                                {% if option.product-to-add-id %}
+                                    product-to-add-id="{{ option.product-to-add-id }}"
+                                {% endif %}
+                        >{{ option.name }}</option>
+                    {% endfor %}
+                </select>
+            {% when "caption" %}
+            {% when "file" %}
+                <input type="file" {{ baseAttrs }}
+                        {% if field.accepted-types %}
+                            accept="
+                        {% for type in field.accepted-types %}
+                            image/{{ type }},
+                        {% endfor %}
+                        "
+                        {% endif %}
+                />
+            {% when "textarea" %}
+                <textarea {{ baseAttrs }} cols="30" rows="10"></textarea>
+        {% endcase %}
+        {% if field.caption %}
+            <caption>{{- field.caption -}}</caption>
+        {% endif %}
+    </div>
+
+{% endfor %}
+
+<script>
+    let customFields = document.querySelectorAll("[customField]");
+    
+    // set defaultValue to all unique custom fields
+    customFields.forEach(field => {
+        let inputType = field.tagName;
+        if (inputType === "INPUT" && field.getAttribute("type") == "checkbox"){
+            field.defaultValue = field.checked;
+        } else if (inputType ==="SELECT"){
+            field.defaultValue = field.value;
+        }
+        
+        field.removeAttribute("customField")
+    })
+
+    let conditionalShowElements = document.querySelectorAll("[data-showIfID]");
+    
+    function disableConditionalEl(el) {
+        el.setAttribute("disabled","")
+        el.parentNode.setAttribute("hidden", "");
+    }
+
+    function enableConditionalEl(el) {
+        el.removeAttribute("disabled")
+        el.parentNode.removeAttribute("hidden");
+    }
+    
+    function toggleBlock(blockToToggle,showValue,observable) {
+        let inputType = observable.tagName;
+        if (inputType === "INPUT"){
+            if(observable.getAttribute("type") == "checkbox"){
+                if(observable.checked && !observable.disabled){
+                    enableConditionalEl(blockToToggle)
+                } else{
+                    disableConditionalEl(blockToToggle)
+                }
+            }
+        } else if (inputType ==="SELECT"){
+            if(observable.value == showValue){
+                enableConditionalEl(blockToToggle)
+            } else{
+                disableConditionalEl(blockToToggle)
+            }
+        }
+    }
+
+    function subscribeToObservableBlock(el) {
+        var blockToObserveId = el.dataset.showifid;
+        var blockToObserve = document.getElementById(blockToObserveId);
+
+        var observableShowValue = el.dataset.showifidvalue;
+        
+        blockToObserve.addEventListener("change",()=>toggleBlock(el,observableShowValue,blockToObserve))
+        new MutationObserver(()=>toggleBlock(el,observableShowValue,blockToObserve)).observe(blockToObserve, {attributes:true});
+
+        toggleBlock(el,observableShowValue,blockToObserve);
+    }
+
+    function processConditionalShownElements() {
+        conditionalShowElements.forEach(el => {
+            disableConditionalEl(el);
+            subscribeToObservableBlock(el);
+        })
+    }
+
+    function handleAdditionalProductChange(el) {
+        const ADDITIONAL_ATTRIBUTE = "additional-product";
+        const PRODUCT_TO_ADD_ATTRIBUTE = "product-to-add-id";
+        switch (el.type) {
+            case "checkbox":
+                if(el.checked){
+                    let productToAddId = el.getAttribute(PRODUCT_TO_ADD_ATTRIBUTE)
+                    el.setAttribute(ADDITIONAL_ATTRIBUTE, productToAddId)
+                } else{
+                    el.removeAttribute(ADDITIONAL_ATTRIBUTE);
+                }
+                break;
+            case "select-one":
+                let optionsWithAdditionalProducts = el.querySelectorAll(`[${PRODUCT_TO_ADD_ATTRIBUTE}]`);
+                // converting nodelist into array https://www.jsdiaries.com/how-to-find-a-object-in-a-nodelist-in-javascript/
+                let additionProductOption = Array.from(optionsWithAdditionalProducts).filter(opt =>opt.innerHTML == el.value)[0];
+                if(additionProductOption){
+                    let productToAddId = additionProductOption.getAttribute(PRODUCT_TO_ADD_ATTRIBUTE)
+                    el.setAttribute(ADDITIONAL_ATTRIBUTE, productToAddId)
+                } else{
+                    el.removeAttribute(ADDITIONAL_ATTRIBUTE);
+                }
+                break
+        }
+    }
+
+    function registerAdditionProductFields() {
+        var additionProductFields = document.querySelectorAll("[additional-product-observable]");
+
+        additionProductFields.forEach(additionProductFields => {
+            additionProductFields.addEventListener("change", (event)=>handleAdditionalProductChange(event.target))
+        })
+    }
+
+    processConditionalShownElements();
+    registerAdditionProductFields()
+</script>

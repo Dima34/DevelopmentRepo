@@ -79,6 +79,7 @@
     padding: 8px 12px;
     line-height: 1.43;
     border: 1px solid #ccc;
+    width: 100%;
 }
 
 .title-logo-form__form a {
