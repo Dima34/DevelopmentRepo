@@ -140,7 +140,36 @@
     },
     "title_image_text": {
       "type": "title-image-text",
+      "blocks": {
+        "8a57124e-f167-47c8-8d25-07c50b4d45fe": {
+          "type": "feature",
+          "settings": {
+            "text": "Ultra Durable"
+          }
+        },
+        "d33f1e28-0fd9-476d-aefa-af5419c1f665": {
+          "type": "feature",
+          "settings": {
+            "text": "Ultra Durable"
+          }
+        },
+        "a02fbd24-f2f1-4b8b-ad92-fca015aae017": {
+          "type": "feature",
+          "settings": {
+            "text": "Ultra Durable"
+          }
+        }
+      },
+      "block_order": [
+        "8a57124e-f167-47c8-8d25-07c50b4d45fe",
+        "d33f1e28-0fd9-476d-aefa-af5419c1f665",
+        "a02fbd24-f2f1-4b8b-ad92-fca015aae017"
+      ],
       "settings": {
+        "heading": "There’s Luxury in the Details",
+        "title": "PremiumEco-Leather",
+        "subtitle": "The Worlds Softest Leather",
+        "text": "A strong grain material eco-leather that is durable, protective, and perforated. Completely compatible with heated seats & air bags.",
         "padding_top": 110,
         "padding_bottom": 110
       }
