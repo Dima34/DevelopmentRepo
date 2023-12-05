@@ -150,20 +150,27 @@
         "d33f1e28-0fd9-476d-aefa-af5419c1f665": {
           "type": "feature",
           "settings": {
-            "text": "Ultra Durable"
+            "text": "Perforated for hot & cool"
           }
         },
         "a02fbd24-f2f1-4b8b-ad92-fca015aae017": {
           "type": "feature",
           "settings": {
-            "text": "Ultra Durable"
+            "text": "Snug Fit Max Comfort"
+          }
+        },
+        "de0ec68b-3a1c-4f93-8c1a-8a4ab6532dfd": {
+          "type": "feature",
+          "settings": {
+            "text": "Breathable Material"
           }
         }
       },
       "block_order": [
         "8a57124e-f167-47c8-8d25-07c50b4d45fe",
         "d33f1e28-0fd9-476d-aefa-af5419c1f665",
-        "a02fbd24-f2f1-4b8b-ad92-fca015aae017"
+        "a02fbd24-f2f1-4b8b-ad92-fca015aae017",
+        "de0ec68b-3a1c-4f93-8c1a-8a4ab6532dfd"
       ],
       "settings": {
         "heading": "There’s Luxury in the Details",
@@ -177,6 +184,16 @@
     },
     "gallery_three_card": {
       "type": "gallery-three-cards",
+      "blocks": {
+        "94f1428e-3d61-4c6d-9c2f-d82cfb195778": {
+          "type": "picture",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "94f1428e-3d61-4c6d-9c2f-d82cfb195778"
+      ],
       "settings": {
         "heading": "Craftsmanship is in our DNA",
         "subtitle": "A strong grain eco-leather that is durable, protective, and perforated.  Completely compatible with heated seats.",
