@@ -3,6 +3,9 @@
     "header_logo_button": {
       "type": "header-logo-button",
       "settings": {
+        "logo": "shopify:\/\/shop_images\/logo.png",
+        "link": "#get-started",
+        "link-text": "Get Started",
         "padding_top": 40,
         "padding_bottom": 16
       }
@@ -10,6 +13,10 @@
     "title_logo_form": {
       "type": "title-logo-form",
       "settings": {
+        "title": "5 Reasons Why<br>These Luxury Car Seat Covers Are The Best",
+        "form-title": "Start Here. We’ve Got You Covered!",
+        "form-link": "https:\/\/stablelastore.com\/products\/heavy-duty-floor-mats-for-cars",
+        "form-link-text": "Let's go",
         "padding_top": 100,
         "padding_bottom": 16,
         "padding_top_mobile": 56,
@@ -220,7 +227,7 @@
       "type": "footer-logo",
       "settings": {
         "logo": "shopify:\/\/shop_images\/footer-logo.svg",
-        "padding_top": 40,
+        "padding_top": 20,
         "padding_bottom": 100
       }
     }
