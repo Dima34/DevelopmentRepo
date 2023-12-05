@@ -13,7 +13,8 @@
     "title_logo_form": {
       "type": "title-logo-form",
       "settings": {
-        "title": "5 Reasons Why<br>These Luxury Car Seat Covers Are The Best",
+        "logo": "shopify:\/\/shop_images\/form-logo.svg",
+        "title": "5 Reasons WhyThese Luxury Car Seat Covers Are The Best",
         "form-title": "Start Here. We’ve Got You Covered!",
         "form-link": "https:\/\/stablelastore.com\/products\/heavy-duty-floor-mats-for-cars",
         "form-link-text": "Let's go",
