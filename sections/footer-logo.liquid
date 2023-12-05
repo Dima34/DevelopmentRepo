@@ -1,4 +1,4 @@
-{{ 'section-header-logo-button.css' | asset_url | stylesheet_tag }}
+{{ 'section-footer-logo.css' | asset_url | stylesheet_tag }}
 
 {%- style -%}
     .section-{{ section.id }}-padding {
@@ -17,16 +17,15 @@
 <div class="footer-logo">
     <div class="page-width section-{{ section.id }}-padding footer-logo__container">
         {% if section.settings.logo %}
-            
+            {{ section.settings.logo | image_url: width: 140 | image_tag }}
         {% endif %}
-        {{ section.settings.logo | image_url: width: 140 | image_tag }}
     </div>
         
 </div>
 
 {% schema %}
 {
-  "name": "Simple header",
+  "name": "Footer logo",
   "tag": "footer",
   "settings": [
     {
