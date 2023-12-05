@@ -18,6 +18,7 @@
         "form-title": "Start Here. We’ve Got You Covered!",
         "form-link": "https:\/\/stablelastore.com\/products\/heavy-duty-floor-mats-for-cars",
         "form-link-text": "Let's go",
+        "fields_json": "Let's go",
         "padding_top": 100,
         "padding_bottom": 16,
         "padding_top_mobile": 56,
@@ -209,7 +210,7 @@
       "settings": {
         "heading": "There’s Luxury in the Details",
         "image": "shopify:\/\/shop_images\/chairs.png",
-        "title": "PremiumEco-Leather",
+        "title": "Premium <br>Eco-Leather",
         "subtitle": "The Worlds Softest Leather",
         "text": "A strong grain material eco-leather that is durable, protective, and perforated. Completely compatible with heated seats & air bags.",
         "padding_top": 110,
