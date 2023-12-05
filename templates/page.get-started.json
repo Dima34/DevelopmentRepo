@@ -188,11 +188,26 @@
         "94f1428e-3d61-4c6d-9c2f-d82cfb195778": {
           "type": "picture",
           "settings": {
+            "image": "shopify:\/\/shop_images\/gallery-1.png"
+          }
+        },
+        "fbe9119f-2b99-468a-a610-ebdd013051a7": {
+          "type": "picture",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gallery-2.png"
+          }
+        },
+        "70539758-5808-4cd7-bcc1-fde6f0905576": {
+          "type": "picture",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/gallery-3.jpg"
           }
         }
       },
       "block_order": [
-        "94f1428e-3d61-4c6d-9c2f-d82cfb195778"
+        "94f1428e-3d61-4c6d-9c2f-d82cfb195778",
+        "fbe9119f-2b99-468a-a610-ebdd013051a7",
+        "70539758-5808-4cd7-bcc1-fde6f0905576"
       ],
       "settings": {
         "heading": "Craftsmanship is in our DNA",
