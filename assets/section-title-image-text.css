@@ -110,6 +110,7 @@
     .title-image-text__right-text{
         font-size: 16px;
         line-height: 24px;
+        letter-spacing: 0.1px;
     }
 
     .title-image-text__right-list-elem p{
@@ -139,6 +140,10 @@
     .title-image-text__right-list-elem img{
         width: 20px;
         height: auto;
+    }
+
+    .title-image-text__right-list-elem p{
+        font-size: 14px;
     }
 }
 

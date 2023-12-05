@@ -16,22 +16,22 @@
 
 <div class="title-image-text">
     <div class="page-width section-{{ section.id }}-padding title-image-text__container">
-        <h2 class="title-image-text__heading">{{ section.settings.heading }}</h2>
+        <h2 class="title-image-text__heading catamaran fw700">{{ section.settings.heading }}</h2>
         <div class="title-image-text__left">
             {% if section.settings.image %}
                 {{ section.settings.image | image_url: width: 1016 | image_tag: class: "title-image-text__left-image"}}
             {% endif %}
         </div>
         <div class="title-image-text__right">
-            <h3 class="title-image-text__right-subtitle">{{ section.settings.subtitle }}</h3>
-            <h2 class="title-image-text__right-title">{{ section.settings.title }}</h2>
-            <p class="title-image-text__right-text">{{ section.settings.text }}</p>
+            <h3 class="title-image-text__right-subtitle sora fw600">{{ section.settings.subtitle }}</h3>
+            <h2 class="title-image-text__right-title sora fw600">{{ section.settings.title }}</h2>
+            <p class="title-image-text__right-text sora">{{ section.settings.text }}</p>
             {% if section.blocks %}
                 <ul class="title-image-text__right-list">
                     {% for block in section.blocks  %}
                         <li class="title-image-text__right-list-elem">
                             <img src="{{ "checked-icon.svg" | asset_url }}" alt="checkmark">
-                            <p>{{ block.settings.text }}</p>
+                            <p class="sora fw600">{{ block.settings.text }}</p>
                         </li>    
                     {% endfor %}
                 </ul>    

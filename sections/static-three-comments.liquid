@@ -16,7 +16,7 @@
 
 <div class="static-three-comments" style="background-image: url('{{ section.settings.background | image_url }}')">
     <div class="page-width section-{{ section.id }}-padding static-three-comments__container">
-        <h2 class="static-three-comments__title">{{ section.settings.title }}</h2>
+        <h2 class="static-three-comments__title catamaran fw700">{{ section.settings.title }}</h2>
         <div class="static-three-comments__blocks">
             {% for block in section.blocks %}
                 <div class="static-three-comments__card">
@@ -26,8 +26,8 @@
                         <img src="{{ 'stars.svg' | asset_url }}"
                                 loading="lazy" alt="five stars icon">
                     </div>
-                    <p class="static-three-comments__cards-text">{{ block.settings.text }}</p>
-                    <h2 class="static-three-comments__cards-title">{{ block.settings.title }}</h2>
+                    <p class="static-three-comments__cards-text catamaran">{{ block.settings.text }}</p>
+                    <h2 class="static-three-comments__cards-title catamaran fw700">{{ block.settings.title }}</h2>
                 </div>
             {% endfor %}
         </div>

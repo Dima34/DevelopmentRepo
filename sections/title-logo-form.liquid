@@ -16,15 +16,15 @@
 
 <div class="title-logo-form">
     <div class="page-width section-{{ section.id }}-padding title-logo-form__container">
-        <h1 class="title-logo-form__heading">{{ section.settings.title }}</h1>
-        <div id="get-started" class="title-logo-form__form-wrapper">
+        <h1 id="get-started" class="title-logo-form__heading catamaran fw700">{{ section.settings.title }}</h1>
+        <div class="title-logo-form__form-wrapper">
             {% if section.settings.logo %}
                 {{ section.settings.logo | image_url: width: 111 | image_tag: class: "title-logo-form__form-logo" }}
             {% endif %}
-            <h2 class="title-logo-form__form-heading">{{ section.settings.form-title }}</h2>
+            <h2 class="title-logo-form__form-heading sora fw700">{{ section.settings.form-title }}</h2>
             <form id="email-form" class="title-logo-form__form" name="email-form">
                 {% render "json_sections", options_json: page.metafields.custom.options_json %}
-                <a href="{{ section.settings.form-link }}">{{ section.settings.form-link-text }}</a>
+                <a href="{{ section.settings.form-link }}" class="sora">{{ section.settings.form-link-text }}</a>
             </form>
         </div>
     </div>
