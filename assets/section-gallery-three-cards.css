@@ -25,19 +25,22 @@
 }
 
 .gallery-three-cards__gallery{
+    display: grid;
     gap: 30px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content min-content;
     grid-template-columns: 1.5fr 1fr;
     grid-auto-flow: dense;
     align-items: start;
     margin-bottom: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 .gallery-three-cards__gallery img{
     border-radius: 20px;
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 }
 
 .gallery-three-cards__gallery img:nth-child(2n){
@@ -46,7 +49,14 @@
 }
 
 @media screen and (max-width: 990px) {
+    .gallery-three-cards__heading{
+        font-size: 36px;
+        line-height: 42px;
+    }
 
+    .gallery-three-cards__subtitle{
+        
+    }
 }
 
 @media screen and (max-width: 768px) {

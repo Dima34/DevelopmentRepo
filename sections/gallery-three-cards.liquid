@@ -18,7 +18,7 @@
     <div class="page-width section-{{ section.id }}-padding gallery-three-cards__container">
         <h2 class="gallery-three-cards__heading">{{ section.settings.heading }}</h2>
         <p class="gallery-three-cards__subtitle">{{ section.settings.subtitle }}</p>
-        <ul class="`">
+        <ul class="gallery-three-cards__gallery">
             {% if section.blocks %}
                 {% for block in section.blocks %}
                     {{ block.settings.image | image_url: width: 680 | image_tag }}

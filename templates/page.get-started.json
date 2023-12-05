@@ -215,6 +215,13 @@
         "padding_top": 0,
         "padding_bottom": 0
       }
+    },
+    "footer_logo": {
+      "type": "footer-logo",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
@@ -226,6 +233,7 @@
     "one_two_horizontal_cards2",
     "static_three_comments",
     "title_image_text",
-    "gallery_three_card"
+    "gallery_three_card",
+    "footer_logo"
   ]
 }

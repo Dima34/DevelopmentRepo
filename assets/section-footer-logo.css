@@ -1,0 +1,31 @@
+.footer-logo{
+    background: black;
+}
+
+.footer-logo__container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer-logo__container img{
+    max-width: 140px;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 990px) {
+    .footer-logo__container img {
+        max-width: 70px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+}
+
+@media screen and (max-width: 479px) {
+
+}
+
+
