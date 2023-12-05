@@ -219,6 +219,7 @@
     "footer_logo": {
       "type": "footer-logo",
       "settings": {
+        "logo": "shopify:\/\/shop_images\/footer-logo.svg",
         "padding_top": 20,
         "padding_bottom": 100
       }
